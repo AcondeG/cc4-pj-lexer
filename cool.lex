@@ -61,7 +61,6 @@ import java_cup.runtime.Symbol;
 	break;
     case STRING:
         return new Symbol(TokenConstants.ERROR, "EOF in string constant");
-    break;
 	/* If necessary, add code for other states here, e.g:
 	   case COMMENT:
 	   ...
@@ -83,10 +82,25 @@ newline = [\n]
 TYPEID = [A-Z][0-9a-zA-Z_]*
 OBJECTID = [a-z][0-9a-zA-Z_]*
 NOT = [Nn][Oo][Tt]
+ELSE = [Ee][Ll][Ss][Ee]
+FI = [Ff][Ii]
+IF = [Ii][Ff]
+IN = [Ii][Nn]
+INHERITS = [Ii][Nn][Hh][Ee][Rr][Ii][Tt][Ss]
+LET = [Ll][Ee][Tt]
+LOOP = [Ll][Oo][Oo][Pp]
+POOL = [Pp][Oo][Oo][Ll]
+THEN = [Tt][Hh][Ee][Nn]
+WHILE = [Ww][Hh][Ii][Ll][Ee]
+CASE = [Cc][Aa][Ss][Ee]
+ESAC = [Ee][Ss][Aa][Cc]
+OF = [Oo][Ff]
+NEW = [Nn][Ee][Ww]
+ISVOID = [Ii][Ss][Vv][Oo][Ii][Dd]
 
 %%
 
-<YYINITIAL>"=>"			{ /* Sample lexical rule for "=>" arrow.
+<YYINITIAL>"=>"  { /* Sample lexical rule for "=>" arrow.
                                      Further lexical rules should be defined
                                      here, after the last %% separator */
                                   return new Symbol(TokenConstants.DARROW); }
