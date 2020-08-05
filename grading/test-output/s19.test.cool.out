@@ -1,0 +1,11 @@
+'('
+'*'
+OBJECTID illegal
+':'
+OBJECTID unescaped
+OBJECTID newline
+'*'
+')'
+LONGERROR
+OBJECTID d
+LONGERROR

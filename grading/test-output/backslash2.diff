@@ -1,13 +1,9 @@
-1a2
-> STR_CONST "I'm not going to escape this newline"
-2a4
-> STR_CONST "This is also not escaped \\\\"
-4,7c6,8
-< LONGERROR
+5,7c5,8
 < STR_CONST "This is, though \\\n"
 < STR_CONST "\\"
 < STR_CONST "It's fine to have this: \n in a string"
 ---
-> STR_CONST "This is, though \\\\\\"
+> LONGERROR
+> LONGERROR
 > STR_CONST "\\\\"
 > STR_CONST "It's fine to have this: \\n in a string"

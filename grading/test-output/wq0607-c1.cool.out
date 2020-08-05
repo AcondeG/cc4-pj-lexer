@@ -1,0 +1,27 @@
+'('
+'*'
+TYPEID COMMENT
+','
+TYPEID STRING
+','
+TYPEID COMMENT
+','
+TYPEID COMMENT
+'*'
+')'
+'-'
+'-'
+STR_CONST "--"
+'-'
+'-'
+LONGERROR
+STR_CONST "--"
+'-'
+'-'
+LONGERROR
+'-'
+'-'
+STR_CONST "--"
+'-'
+'-'
+LONGERROR

@@ -1,0 +1,20 @@
+1c1,17
+< LONGERROR
+---
+> '-'
+> '-'
+> OBJECTID tricky
+> ':'
+> OBJECTID this
+> OBJECTID should
+> OBJECTID be
+> OBJECTID seen
+> OBJECTID as
+> OBJECTID an
+> OBJECTID error
+> ','
+> NOT
+> OBJECTID two
+> OBJECTID tokens
+> '*'
+> ')'

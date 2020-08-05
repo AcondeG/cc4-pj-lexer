@@ -1,0 +1,28 @@
+0a1,13
+> '('
+> '*'
+> TYPEID COMMENT
+> ','
+> TYPEID STRING
+> ','
+> TYPEID COMMENT
+> ','
+> TYPEID COMMENT
+> '*'
+> ')'
+> '-'
+> '-'
+1a15,27
+> '-'
+> '-'
+> LONGERROR
+> STR_CONST "--"
+> '-'
+> '-'
+> LONGERROR
+> '-'
+> '-'
+> STR_CONST "--"
+> '-'
+> '-'
+> LONGERROR

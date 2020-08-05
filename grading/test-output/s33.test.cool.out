@@ -1,0 +1,18 @@
+'('
+'*'
+OBJECTID test
+OBJECTID an
+OBJECTID unterminated
+OBJECTID comment
+'*'
+')'
+OBJECTID before_the_comment
+'('
+'*'
+OBJECTID this
+'*'
+OBJECTID won
+LEXER BUG - UNMATCHED: '
+OBJECTID t
+'*'
+OBJECTID end

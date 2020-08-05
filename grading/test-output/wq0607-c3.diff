@@ -1,0 +1,41 @@
+0a1,14
+> '('
+> '*'
+> TYPEID Complicated
+> OBJECTID sequence
+> OF
+> OBJECTID strings
+> OBJECTID and
+> OBJECTID escaped
+> OBJECTID quotes
+> OBJECTID and
+> OBJECTID errors
+> '*'
+> ')'
+> STR_CONST "\\\\"
+2,4c16
+< STR_CONST "\"\""
+< LONGERROR
+< LONGERROR
+---
+> LEXER BUG - UNMATCHED: \
+6c18,26
+< LONGERROR
+---
+> LEXER BUG - UNMATCHED: \
+> LEXER BUG - UNMATCHED: \
+> STR_CONST ""
+> LEXER BUG - UNMATCHED: \
+> STR_CONST "\\\\"
+> LEXER BUG - UNMATCHED: \
+> STR_CONST "\\\\"
+> STR_CONST ""
+> LEXER BUG - UNMATCHED: \
+8d27
+< LONGERROR
+10,14d28
+< STR_CONST ""
+< LONGERROR
+< STR_CONST "\""
+< LONGERROR
+< LONGERROR

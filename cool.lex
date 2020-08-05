@@ -60,6 +60,7 @@ import java_cup.runtime.Symbol;
 	/* nothing special to do in the initial state */
 	break;
     case STRING:
+        yybegin(YYINITIAL);
         return new Symbol(TokenConstants.ERROR, "EOF in string constant");
 	/* If necessary, add code for other states here, e.g:
 	   case COMMENT:
@@ -75,10 +76,10 @@ import java_cup.runtime.Symbol;
 %state STRING
 min_letters = [a-z]
 mayus_letters = [A-Z]
-number = [0-9]+
-false = ([f])([Aa])([Ll])([Ss])([Ee])
-true = ([t])([Rr])([Uu])([Ee])
-newline = [\n]
+NUMBER = [0-9]+
+FALSE = ([f])([Aa])([Ll])([Ss])([Ee])
+TRUE = ([t])([Rr])([Uu])([Ee])
+NEWLINE = [\n]
 TYPEID = [A-Z][0-9a-zA-Z_]*
 OBJECTID = [a-z][0-9a-zA-Z_]*
 NOT = [Nn][Oo][Tt]
@@ -97,6 +98,7 @@ ESAC = [Ee][Ss][Aa][Cc]
 OF = [Oo][Ff]
 NEW = [Nn][Ee][Ww]
 ISVOID = [Ii][Ss][Vv][Oo][Ii][Dd]
+CLASS = [Cc][Ll][Aa][Ss][Ss]
 
 %%
 
@@ -105,7 +107,7 @@ ISVOID = [Ii][Ss][Vv][Oo][Ii][Dd]
                                      here, after the last %% separator */
                                   return new Symbol(TokenConstants.DARROW); }
 
-<YYINITIAL>{newline} {
+<YYINITIAL>{NEWLINE} {
     curr_lineno++;
 }
 
@@ -190,11 +192,75 @@ ISVOID = [Ii][Ss][Vv][Oo][Ii][Dd]
     return new Symbol(TokenConstants.NOT);
 }
 
-<YYINITIAL>{false} {
+<YYINITIAL>{ELSE} {
+    return new Symbol(TokenConstants.ELSE);
+}
+
+<YYINITIAL>{IF} {
+    return new Symbol(TokenConstants.IF);
+}
+
+<YYINITIAL>{FI} {
+    return new Symbol(TokenConstants.FI);
+}
+
+<YYINITIAL>{IN} {
+    return new Symbol(TokenConstants.IN);
+}
+
+<YYINITIAL>{INHERITS} {
+    return new Symbol(TokenConstants.INHERITS);
+}
+
+<YYINITIAL>{LET} {
+    return new Symbol(TokenConstants.LET);
+}
+
+<YYINITIAL>{LOOP} {
+    return new Symbol(TokenConstants.LOOP);
+}
+
+<YYINITIAL>{POOL} {
+    return new Symbol(TokenConstants.POOL);
+}
+
+<YYINITIAL>{THEN} {
+    return new Symbol(TokenConstants.THEN);
+}
+
+<YYINITIAL>{WHILE} {
+    return new Symbol(TokenConstants.WHILE);
+}
+
+<YYINITIAL>{CASE} {
+    return new Symbol(TokenConstants.CASE);
+}
+
+<YYINITIAL>{ESAC} {
+    return new Symbol(TokenConstants.ESAC);
+}
+
+<YYINITIAL>{OF} {
+    return new Symbol(TokenConstants.OF);
+}
+
+<YYINITIAL>{NEW} {
+    return new Symbol(TokenConstants.NEW);
+}
+
+<YYINITIAL>{ISVOID} {
+    return new Symbol(TokenConstants.ISVOID);
+}
+
+<YYINITIAL>{CLASS} {
+    return new Symbol(TokenConstants.CLASS);
+}
+
+<YYINITIAL>{FALSE} {
     return new Symbol(TokenConstants.BOOL_CONST, false);
 }
 
-<YYINITIAL>{true} {
+<YYINITIAL>{TRUE} {
     return new Symbol(TokenConstants.BOOL_CONST, true);
 }
 
@@ -209,7 +275,7 @@ ISVOID = [Ii][Ss][Vv][Oo][Ii][Dd]
 }
 
 
-<YYINITIAL>{number} {
+<YYINITIAL>{NUMBER} {
     AbstractSymbol numero = AbstractTable.inttable.addString(yytext());
     return new Symbol(TokenConstants.INT_CONST, numero);
 }
@@ -220,10 +286,12 @@ ISVOID = [Ii][Ss][Vv][Oo][Ii][Dd]
 }
 
 <STRING>"\0" {
+    yybegin(YYINITIAL);
     return new Symbol(TokenConstants.ERROR, "String contains null character");
 }
 
-<STRING>{newline} {
+<STRING>{NEWLINE} {
+    yybegin(YYINITIAL);
     return new Symbol(TokenConstants.ERROR, "Unterminated string constant");
 }
 
@@ -236,6 +304,7 @@ ISVOID = [Ii][Ss][Vv][Oo][Ii][Dd]
 <STRING>. {
     currentString += yytext();
     if(currentString.length() > MAX_STR_CONST){
+        yybegin(YYINITIAL);
         return new Symbol(TokenConstants.ERROR, "String constant too long");
     }
 }

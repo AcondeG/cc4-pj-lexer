@@ -1,0 +1,30 @@
+'('
+'*'
+TYPEID COMMENT
+','
+TYPEID STRING
+','
+TYPEID ERROR
+LEXER BUG - UNMATCHED: [
+OBJECTID unmatched
+OBJECTID close
+OBJECTID comment
+LEXER BUG - UNMATCHED: ]
+','
+TYPEID STRING
+'*'
+')'
+'('
+'*'
+STR_CONST "(*"
+'*'
+')'
+STR_CONST "*)"
+'('
+'*'
+STR_CONST "*)"
+'*'
+')'
+'('
+'*'
+LONGERROR

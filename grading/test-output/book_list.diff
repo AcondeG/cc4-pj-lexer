@@ -1,0 +1,211 @@
+0a1,12
+> '-'
+> '-'
+> OBJECTID example
+> OF
+> OBJECTID static
+> OBJECTID and
+> OBJECTID dynamic
+> OBJECTID type
+> OBJECTID differing
+> OBJECTID for
+> OBJECTID a
+> OBJECTID dispatch
+60c72
+< STR_CONST "\n"
+---
+> STR_CONST "\\n"
+75c87
+< STR_CONST "\n"
+---
+> STR_CONST "\\n"
+136c148
+< '@'
+---
+> LEXER BUG - UNMATCHED: @
+155c167
+< STR_CONST "\n"
+---
+> STR_CONST "\\n"
+169a182,219
+> '('
+> '*'
+> TYPEID Since
+> OBJECTID abort
+> STR_CONST "returns"
+> OBJECTID type
+> TYPEID Object
+> ','
+> OBJECTID we
+> OBJECTID have
+> OBJECTID to
+> OBJECTID add
+> OBJECTID an
+> OBJECTID expression
+> OF
+> OBJECTID type
+> TYPEID Bool
+> OBJECTID here
+> OBJECTID to
+> OBJECTID satisfy
+> OBJECTID the
+> OBJECTID typechecker
+> '.'
+> TYPEID This
+> OBJECTID code
+> OBJECTID is
+> OBJECTID unreachable
+> ','
+> OBJECTID since
+> OBJECTID abort
+> '('
+> ')'
+> OBJECTID halts
+> OBJECTID the
+> OBJECTID program
+> '.'
+> '*'
+> ')'
+214a265,302
+> '('
+> '*'
+> TYPEID Since
+> OBJECTID abort
+> STR_CONST "returns"
+> OBJECTID type
+> TYPEID Object
+> ','
+> OBJECTID we
+> OBJECTID have
+> OBJECTID to
+> OBJECTID add
+> OBJECTID an
+> OBJECTID expression
+> OF
+> OBJECTID type
+> TYPEID Book
+> OBJECTID here
+> OBJECTID to
+> OBJECTID satisfy
+> OBJECTID the
+> OBJECTID typechecker
+> '.'
+> TYPEID This
+> OBJECTID code
+> OBJECTID is
+> OBJECTID unreachable
+> ','
+> OBJECTID since
+> OBJECTID abort
+> '('
+> ')'
+> OBJECTID halts
+> OBJECTID the
+> OBJECTID program
+> '.'
+> '*'
+> ')'
+231a320,357
+> '('
+> '*'
+> TYPEID Since
+> OBJECTID abort
+> STR_CONST "returns"
+> OBJECTID type
+> TYPEID Object
+> ','
+> OBJECTID we
+> OBJECTID have
+> OBJECTID to
+> OBJECTID add
+> OBJECTID an
+> OBJECTID expression
+> OF
+> OBJECTID type
+> TYPEID BookList
+> OBJECTID here
+> OBJECTID to
+> OBJECTID satisfy
+> OBJECTID the
+> OBJECTID typechecker
+> '.'
+> TYPEID This
+> OBJECTID code
+> OBJECTID is
+> OBJECTID unreachable
+> ','
+> OBJECTID since
+> OBJECTID abort
+> '('
+> ')'
+> OBJECTID halts
+> OBJECTID the
+> OBJECTID program
+> '.'
+> '*'
+> ')'
+270a397,407
+> '-'
+> '-'
+> TYPEID We
+> OBJECTID keep
+> OBJECTID the
+> OBJECTID car
+> OBJECTID and
+> OBJECTID cdr
+> IN
+> OBJECTID attributes
+> '.'
+274a412,443
+> '-'
+> '-'
+> TYPEID Because
+> OBJECTID methods
+> OBJECTID and
+> OBJECTID features
+> OBJECTID must
+> OBJECTID have
+> OBJECTID different
+> OBJECTID names
+> ','
+> '-'
+> '-'
+> OBJECTID we
+> OBJECTID use
+> OBJECTID xcar
+> OBJECTID and
+> OBJECTID xcdr
+> OBJECTID for
+> OBJECTID the
+> OBJECTID attributes
+> OBJECTID and
+> OBJECTID reserve
+> '-'
+> '-'
+> OBJECTID car
+> OBJECTID and
+> OBJECTID cdr
+> OBJECTID for
+> OBJECTID the
+> OBJECTID features
+> '.'
+349c518
+< STR_CONST "- dynamic type was Book -\n"
+---
+> STR_CONST "- dynamic type was Book -\\n"
+358c527
+< STR_CONST "- dynamic type was Article -\n"
+---
+> STR_CONST "- dynamic type was Article -\\n"
+475a645,649
+> '-'
+> '-'
+> OBJECTID end
+> LET
+> OBJECTID an_article
+476a651,655
+> '-'
+> '-'
+> OBJECTID end
+> LET
+> OBJECTID a_book

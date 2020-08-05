@@ -1,0 +1,21 @@
+1,3c1,16
+< #5 ERROR "!"
+< #6 OBJECTID fjdk
+< #7 STR_CONST ""
+---
+> #1 '('
+> #1 '*'
+> #1 OBJECTID jfkds
+> #1 ';'
+> #1 OBJECTID ajfkdl
+> #1 ';'
+> #1 OBJECTID a
+> #1 '('
+> #1 '*'
+> #1 ERROR "Unterminated string constant"
+> #2 ERROR "Unterminated string constant"
+> #2 '*'
+> #2 ')'
+> LEXER BUG - UNMATCHED: !
+> #4 OBJECTID fjdk
+> #5 STR_CONST ""

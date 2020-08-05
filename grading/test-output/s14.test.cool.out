@@ -1,0 +1,11 @@
+OBJECTID token
+'('
+'*'
+'*'
+OBJECTID cmt
+'*'
+')'
+OBJECTID token2
+'-'
+'-'
+OBJECTID cmt2

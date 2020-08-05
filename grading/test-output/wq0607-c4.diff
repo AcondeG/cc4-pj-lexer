@@ -1,0 +1,126 @@
+1c1,13
+< STR_CONST "\\-"
+---
+> '('
+> '*'
+> TYPEID Complicated
+> OBJECTID sequence
+> OF
+> OBJECTID strings
+> OBJECTID and
+> OBJECTID escaped
+> OBJECTID quotes
+> OBJECTID and
+> OBJECTID errors
+> OBJECTID and
+> OBJECTID single
+3,6c15,21
+< STR_CONST "--"
+< STR_CONST "\\"
+< STR_CONST "\"--\""
+< LONGERROR
+---
+> OBJECTID line
+> OBJECTID comments
+> '*'
+> ')'
+> STR_CONST "\\\\-"
+> '-'
+> STR_CONST "-\\-"
+8c23,24
+< LONGERROR
+---
+> '-'
+> LEXER BUG - UNMATCHED: \
+10,12c26,38
+< LONGERROR
+< STR_CONST "--\\"
+< LONGERROR
+---
+> LEXER BUG - UNMATCHED: \
+> LEXER BUG - UNMATCHED: \
+> STR_CONST "-"
+> LEXER BUG - UNMATCHED: \
+> STR_CONST "\\\\"
+> '-'
+> LEXER BUG - UNMATCHED: \
+> '-'
+> STR_CONST "\\\\"
+> STR_CONST ""
+> LEXER BUG - UNMATCHED: \
+> '-'
+> '-'
+15,17c41,49
+< STR_CONST "\"--\""
+< LONGERROR
+< LONGERROR
+---
+> STR_CONST "\\\\"
+> STR_CONST "\\"
+> '-'
+> '-'
+> LEXER BUG - UNMATCHED: \
+> STR_CONST ""
+> LEXER BUG - UNMATCHED: \
+> '-'
+> LEXER BUG - UNMATCHED: \
+19,21c51,61
+< LONGERROR
+< STR_CONST "--\\"
+< LONGERROR
+---
+> LEXER BUG - UNMATCHED: \
+> STR_CONST "--\\\\"
+> LEXER BUG - UNMATCHED: \
+> STR_CONST "\\\\"
+> '-'
+> '-'
+> STR_CONST ""
+> LEXER BUG - UNMATCHED: \
+> STR_CONST "\\--"
+> STR_CONST "\\"
+> STR_CONST "\\\\"
+22a63,73
+> '-'
+> '-'
+> LEXER BUG - UNMATCHED: \
+> STR_CONST ""
+> LEXER BUG - UNMATCHED: \
+> LEXER BUG - UNMATCHED: \
+> STR_CONST ""
+> LEXER BUG - UNMATCHED: \
+> STR_CONST "--\\\\"
+> LEXER BUG - UNMATCHED: \
+> STR_CONST "\\\\"
+24,29c75,98
+< LONGERROR
+< STR_CONST "\""
+< LONGERROR
+< LONGERROR
+< STR_CONST "-\""
+< LONGERROR
+---
+> LEXER BUG - UNMATCHED: \
+> STR_CONST "\\"
+> STR_CONST "\\"
+> STR_CONST "\\-\\"
+> STR_CONST "\\--"
+> LEXER BUG - UNMATCHED: \
+> STR_CONST ""
+> LEXER BUG - UNMATCHED: \
+> '-'
+> '-'
+> LEXER BUG - UNMATCHED: \
+> STR_CONST ""
+> LEXER BUG - UNMATCHED: \
+> STR_CONST "\\\\"
+> LEXER BUG - UNMATCHED: \
+> '-'
+> '-'
+> STR_CONST "\\\\"
+> STR_CONST ""
+> LEXER BUG - UNMATCHED: \
+> '-'
+> '-'
+> STR_CONST "\\"
+> STR_CONST "\\"

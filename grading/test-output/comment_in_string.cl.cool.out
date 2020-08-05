@@ -1,0 +1,13 @@
+STR_CONST "string (* 123 *) string"
+LONGERROR
+'('
+'*'
+INT_CONST 123
+'*'
+')'
+LONGERROR
+LONGERROR
+INT_CONST 123
+'*'
+')'
+LONGERROR

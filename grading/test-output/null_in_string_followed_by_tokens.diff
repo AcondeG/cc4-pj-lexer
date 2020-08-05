@@ -1,0 +1,12 @@
+1c1,9
+< LONGERROR
+---
+> '('
+> '*'
+> OBJECTID null
+> OBJECTID character
+> IN
+> OBJECTID string
+> '*'
+> ')'
+> STR_CONST "null character is here ->\000<-"

@@ -1,0 +1,7 @@
+#name "./escapedunprintables.cool"
+#1 STR_CONST "This is a tab:\\\t"
+#2 STR_CONST "This is a backspace:\\\b"
+#3 STR_CONST "This is a formfeed:\\\f"
+Exception in thread "main" java.lang.Error: Lexical Error: Unmatched Input.
+	at CoolLexer.next_token(CoolLexer.java:505)
+	at Lexer.main(Lexer.java:43)
