@@ -1,9 +1,0 @@
-0a1,8
-> '('
-> '*'
-> OBJECTID illegal
-> ':'
-> OBJECTID unescaped
-> OBJECTID newline
-> '*'
-> ')'

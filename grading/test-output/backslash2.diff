@@ -1,9 +1,0 @@
-5,7c5,8
-< STR_CONST "This is, though \\\n"
-< STR_CONST "\\"
-< STR_CONST "It's fine to have this: \n in a string"
----
-> LONGERROR
-> LONGERROR
-> STR_CONST "\\\\"
-> STR_CONST "It's fine to have this: \\n in a string"
